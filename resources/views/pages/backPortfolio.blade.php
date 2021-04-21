@@ -32,7 +32,7 @@
                         <a href="/portfolio">Portfolio</a>                                
                     </li>
                     <li>
-                        <a href="/backBlog">Back Black</a>                                
+                        <a href="/backBlog">Back Blog</a>                                
                     </li>
                 </ul><!-- /.navbar-nav -->
             </div><!-- /.navbar-collapse -->

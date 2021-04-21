@@ -2,13 +2,13 @@
 
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\BackBlogController;
-use App\Http\Controllers\BackController;
+
 use App\Http\Controllers\BackPortfolioController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\BlogController;
+
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ContactController;
-use App\Models\Article;
+
 use Illuminate\Support\Facades\Route;
 
 /*
