@@ -44,11 +44,35 @@
         </div>
         <div class="row">
             @foreach ($article as $item)
-            <div class="col-3">
-                <img style="width: 60%" src="{{$item->image}}" alt="">
-                <h1>{{$item->titre}}</h1>
-                <p>{{$item->text}}</p>
-            </div>
+            <table class="table table-bordered container">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Titre</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Text</th>
+                    <th scope="col">Delete</th>
+                    <th scope="col">Show</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">{{$item->id}}</th>
+                    <td>{{$item->titre}}</td>
+                    <td><img src="{{$item->image}}" alt=""></td>
+                    <td>{{$item->text}}</td>
+                    <td>
+                        <form action="destroy-article/{{$item->id}}" method="post">
+                            @csrf
+                            <button class="btn-danger btn" type="submit">Delete</button>
+                        </form>
+                  </td>
+                    <td>
+                        <a href="show/{{$item->id}}"><button class="btn-primary btn" type="submit">Show</button></a>
+                  </td>
+                  </tr>
+                </tbody>
+              </table>
             @endforeach
         </div>
     </nav><!-- /.site-navigation -->

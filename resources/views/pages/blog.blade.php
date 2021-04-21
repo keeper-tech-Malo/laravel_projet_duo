@@ -20,39 +20,26 @@
 
             <div class="row">
 
+                @foreach ($article as $item)
                 <div class="col-md-9">
-
+                        
+                    
                     <div class="blog-post">
 
-                        <a href="blog-post.html"><img class="img-carousel post-img" src={{"img/portfolio-1.jpg"}} alt=""></a>
+                        <a href="blog-post.html"><img class="img-carousel post-img" src={{$item->image}} alt=""></a>
 
                         <div class="post-content">
 
-                            <h3><a class="post-title" href="blog-post.html">Is Passion Good For Business?</a></h3>
+                            <h3><a class="post-title" href="blog-post.html">{{$item->titre}}</a></h3>
 
                                     
-                            <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p class="section-text">{{$item->text}}</p>
                             
                         </div><!-- /.post-content -->
 
                     </div><!-- /.blog-post -->
-                    <div class="blog-post">
-
-                        <a href="blog-post.html"><img class="img-carousel post-img" src={{"img/portfolio-1.jpg"}} alt=""></a>
-
-                        <div class="post-content">
-
-                            <h3><a class="post-title" href="blog-post.html">Is Passion Good For Business?</a></h3>
-
-                                    
-                            <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            
-                        </div><!-- /.post-content -->
-
-                    </div><!-- /.blog-post -->
-
-
                 </div>
+                @endforeach
             </div>
         </div>
         

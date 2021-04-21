@@ -83,7 +83,6 @@ class BackPortfolioController extends Controller
      */
     public function destroy(backPortfolio $backPortfolio)
     {
-        $backPortfolio->delete();
-        return redirect()->back();
+        
     }
 }
