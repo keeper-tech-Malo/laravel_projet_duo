@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Back</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link href={{"css/bootstrap.min.css"}} rel="stylesheet">
+    
 </head>
 <body>
     <form action="/create.portfolio" method="POST">
@@ -26,21 +28,22 @@
 
             <div class="main-menu" id="perfect-navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
+                    <li>
                         <a href="/blog">Blog </a>
                     </li>
                     <li>
                         <a href="/portfolio">Portfolio</a>                                
                     </li>
                     <li>
-                        <a href="/backBlog">Back Blog</a>                                
+                        <a href="/backBlog">Backoffice Blog</a>                                
                     </li>
                 </ul><!-- /.navbar-nav -->
             </div><!-- /.navbar-collapse -->
             
         </div>
-        <div class="row">
+        <div class="container">
             @foreach ($image as $item)
-            <table class="table table-bordered container">
+            <table class="table table-bordered row">
                 <thead>
                   <tr>
                     <th scope="col">Id</th>
